@@ -756,7 +756,21 @@ main {
 
 .clients-item img:hover { filter: grayscale(0); }
 
+.clients-item {
+  display: flex;
+  justify-content: center;  /* center horizontally */
+  align-items: center;      /* center vertically */
+  width: 120px;             /* fixed width for consistency */
+  height: 120px;            /* fixed height for consistency */
+  flex-shrink: 0;           /* prevent shrinking when scrolling */
+  border-radius: 8px;
+}
 
+.clients-item img {
+  max-width: 100%;
+  max-height: 80px;  /* prevent very tall logos */
+  object-fit: contain;
+}
 
 
 
